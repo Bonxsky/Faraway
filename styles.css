@@ -1,0 +1,192 @@
+/* Reset CSS */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #FFEBD4; /* Warna tambahan sebagai background */
+}
+
+header {
+    background-color: #F0A8D0; /* Warna utama */
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+header h1 {
+    margin: 0;
+}
+
+section {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+footer {
+    background-color: #F0A8D0; /* Warna utama */
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Timeline */
+#timeline {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 2rem 0;
+    position: relative;
+}
+
+.timeline-container {
+    position: relative;
+    padding: 0 1rem;
+}
+
+/* Garis putus-putus utama */
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 20px; /* Menyesuaikan posisi dari kotak */
+    width: 2px;
+    height: 100%;
+    border-left: 4px dashed #000; /* Garis putus-putus hitam yang lebih tebal */
+    background-color: transparent;
+}
+
+.timeline-item {
+    position: relative;
+    padding: 1rem 2rem;
+    margin-bottom: 4rem; /* Jarak antar item timeline */
+    border-radius: 8px;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.timeline-item .timeline-marker {
+    position: absolute;
+    left: -22px; /* Menyesuaikan posisi dari garis */
+    width: 30px; /* Ukuran marker */
+    height: 30px; /* Ukuran marker */
+    background-color: #0000ff; /* Warna biru untuk marker */
+    border-radius: 50%; /* Bentuk lingkaran */
+    box-shadow: 0 0 0 4px #fff; /* Bayangan putih untuk membuat marker lebih menonjol */
+    top: 50%;
+    transform: translateY(-50%); /* Menempatkan marker di tengah secara vertikal */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px; /* Ukuran font untuk ikon */
+    color: white; /* Warna teks di dalam marker */
+}
+
+/* Konten timeline */
+.timeline-item .timeline-content {
+    position: relative;
+    background-color: #F7B5CA; /* Warna kedua */
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-item .timeline-date {
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+/* Animation class */
+.timeline-item.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Gallery */
+#gallery {
+    background-color: #FFC6C6; /* Warna ketiga */
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.1);
+}
+
+/* Message Section */
+#message {
+    background-color: #F7B5CA; /* Warna kedua */
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+}
+
+#show-message-btn {
+    background-color: #F0A8D0; /* Warna utama */
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#show-message-btn:hover {
+    background-color: #e55b4f;
+}
+
+#surprise-message {
+    margin-top: 1rem;
+    display: none;
+}
+
+#surprise-message.visible {
+    display: block;
+}
+
+/* Love Meter */
+#love-meter {
+    background-color: #FFC6C6; /* Warna ketiga */
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+}
+
+#love-range {
+    width: 100%;
+    max-width: 300px;
+    margin: 1rem 0;
+}
+
+#love-description {
+    font-size: 1.2em;
+    font-weight: bold;
+}
